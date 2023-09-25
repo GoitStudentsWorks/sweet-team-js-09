@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/sweet-team-js-09/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Treats</title>
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-regular-1907e8c7.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-medium-f8bcde4c.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-semibold-fc5108ef.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-regular-1907e8c7.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-medium-f8bcde4c.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/sweet-team-js-09/assets/inter-semibold-fc5108ef.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    
+    <script type="module" crossorigin src="/sweet-team-js-09/assets/main-e7912e5d.js"></script>
+    <link rel="stylesheet" href="/sweet-team-js-09/assets/main-a940280b.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header-container">
+    <ul class="header-pages">
+      <li class="header-pages-item home-page">
+        <a class="header-pages-link" href="index.html">Home</a>
+      </li>
+      <li class="header-pages-item favorite-page">
+        <a class="header-pages-link" href="favorites.html">Favorites</a>
+      </li>
+    </ul>
+
+    <a class="header-title" href="index.html">
+      <span class="header-title-span">tasty</span>treats.</a
+    >
+
+    <ul class="header-buttons-list">
+      <li class="header-buttons-item basket">
+        <button class="header-button" aria-label="basket">
+          <svg class="header-button-icon" width="24" height="24">
+            <use href="/sweet-team-js-09/assets/sprite-b3ccd6e9.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-buttons-item burger-menu js-burger-menu">
+        <button class="header-button open-menu-btn" aria-label="open menu">
+          <svg class="header-button-icon" width="32" height="32">
+            <use href="/sweet-team-js-09/assets/sprite-b3ccd6e9.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-buttons-item">
+        <div class="mobile-menu-container">
+          <div class="mobile-menu-close">
+            <button class="mobile-menu-close-btn" aria-label="close menu">
+              <svg class="mobile-menu-close-icon" width="32" height="32">
+                <use href="/sweet-team-js-09/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu-pages">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item home-page">
+                <a class="header-mobile_modal-link link" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="mobile-menu-item favorite-page">
+                <a class="header-mobile_modal-link link" href="favorites.html"
+                  >Favorites</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="theme-switcher">
+            <div class="pretty p-switch p-fill">
+              <input
+                type="checkbox"
+                id="themeSwitch"
+                aria-label="theme-switcher"
+              />
+              <div class="state">
+                <label></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+      <main>
+        <section>
+    <div class="favorites-hero container">
+        <div class="favorites-hero-image"></div>
+    </div>
+</section>
+
+        <section class="favorites-cards container">
+          <div class="favorites-categories-container">
+    <div class="favorites-cards-filter"></div>
+</div>
+
+          
+<div class="favorites-recipes-container">
+  <div class="favorites-cards-container"></div>
+
+  <div class="favorites-empty-container hidden-empty">
+    <svg class="favorites-empty-container-logo" width="68" height="58">
+      <use href="/sweet-team-js-09/assets/sprite-b3ccd6e9.svg#icon-empty-favorits"></use>
+    </svg>
+    <p class="favorites-empty-container-text">
+      It appears that you haven't added any recipes to your favorites yet. To
+      get started, you can add recipes that you like to your favorites for
+      easier access in the future.
+    </p>
+  </div>
+</div>
+
+      </section>
+      </main>
+    </div>
+    <section>
+  <!--Modal menu---->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="btn-modal-close" data-modal-close>
+        <svg class="icon-close" width="24" height="24">
+          <use href="/sweet-team-js-09/assets/sprite-b3ccd6e9.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="title-modal">ORDER NOW</h2>
+
+      <!-- Modal menu form-->
+      <form class="callback-form" name="callback-form">
+        <div class="callback-form-inputs">
+          <!-- Name -->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-name">Name</label>
+            <input
+              class="modal-input"
+              type="text"
+              placeholder="Enter your name"
+              required
+              pattern="[A-Za-zA-Яа-я]+$"
+              title="Please enter a valid name using only letters."
+              minlength="2"
+              autofocus
+              id="buyer-name"
+            />
+          </div>
+          <!-- Phone number -->
+          <div class="modal-field">
+            <label class="label-title" for="phone">Phone number</label>
+            <input
+              class="modal-input"
+              placeholder="+380000000000"
+              type="tel"
+              id="buyer-phone"
+              name="phone"
+              pattern="\+38[0-9]{10}"
+              title="Please enter a valid phone number starting with +38 followed by 10 digits."
+              required
+            />
+          </div>
+          <!--Email-->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-email">Email</label>
+            <input
+              class="modal-input"
+              type="email"
+              placeholder="Enter your email"
+              id="buyer-email"
+              type="email"
+              name="email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address (e.g. example@example.com)."
+              required
+            />
+          </div>
+          <!-- Comments-->
+          <div class="modal-field">
+            <label class="label-title" for="buyer-comment">Comments</label>
+            <textarea
+              class="form-comment modal-input"
+              placeholder="Enter your text"
+              id="buyer-comment"
+            ></textarea>
+          </div>
+        </div>
+        <div class="order">
+          <!--Send button-->
+          <button class="send-btn" type="submit">Send</button>
+          <!--That nobody read-->
+          <span class="info-text"
+            >By clicking on “Send message” button, you agree to our
+            <a href="https://privacy.microsoft.com/en-us" class="link-license"
+              >Privacy Policy</a
+            >
+            , and allow Promodo to use this information for marketing
+            purposes.</span
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <div class="modal-recipe-backdrop js-modal-recipe is-hidden"></div>
+
+    <button id="scrollToTopButton" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    
+  </body>
+</html>
